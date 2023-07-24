@@ -4,9 +4,14 @@
 	box-sizing: border-box;
 	margin: auto; padding: 0;
 	transition: all 0.6s ease
-	text-decoration:none;
+	text-decoration: none;
 }
-
+.info {
+	padding-top: 40px;
+	padding-bottom: 75px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
 header{
     width:100%;
     color:var(--main-font);
@@ -21,7 +26,6 @@ header .login{
     display:flex;
     color:#CACACA;
     align-items: center;
-
 }
 
 header .login img{
@@ -77,6 +81,85 @@ header nav{
 .titulos a{
 	font-weight: bold;
 }
+.line{
+    width:75%;
+    height:3px;
+    margin:.5rem 15%;
+    background-color: var(--main-font);
+}
+#searcher{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    height:75px;
+    gap: 1rem;
+    font-family: thin-font;
+    background-color: #AF8A53;
+}
+
+#searcher .main_searcher{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+
+}
+
+#searcher .main_searcher #searcher_button{
+    width:35px;
+    height: 35px;
+    border-radius: 50%;
+    display:grid;
+    place-items: center;
+    padding:5px;
+    background-color: #666666;
+}
+
+#searcher .main_searcher .title{
+    color:white;
+    font-size: 1.5rem;
+}
+
+#searcher .main_searcher select,input{
+    padding: .2rem;
+}
+#searcher .main_searcher select{
+    background-color: white;
+    border: 2px solid #666666;
+}
+
+#searcher .main_searcher #searcher_button img{
+    width:90%;
+    border-radius: 50%;
+    height:90%;
+}
+
+#buttons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#buttons .button{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #AF8A53;
+    display: grid;
+    place-items: center;
+    transition: .5s;
+    outline: 0px solid whitesmoke;
+}
+
+#buttons .button:hover{
+    transition: .5s;
+    outline: 2px solid whitesmoke;
+}
+
+#buttons .button img{
+    height: 90%;
+    width:90%;
+    border-radius: 50%;
+}
 a {
 	border: white;
 	color: black;
@@ -96,12 +179,9 @@ a:hover{
 .card-header {
 	border-bottom: solid 1px gray;
 	display: flex;
-	/* padding: 1rem; */
+	font-size: 25px;
 	height: 10vh;
-	/* justify-content: center; */
-	/* text-align: center; */
-	/* align-items: center; */
-	/* align-content: center; */
+	font-family: 'Quicksand', sans-serif;
 }
 form {
 	width: 100%;
@@ -139,15 +219,20 @@ input {
 	padding: 0;
 	position: absolute;
 }
-.nombre{
-	left: 36px;
-	top: 30px;
-	display: block;
+.add{
+	width: 90%;
+	color: gray;
 }
-.apellido {
-	top: 30px;
-	display: block;
-	right: 442px;
+.ingresarInfo {
+	width: 45%;
+	padding: 5px;
+	border: solid 4px rgba(170,143,83,0.6);
+	height: 4vh;
+	padding: 7px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: black;
 }
 .email {
 	position: absolute;
@@ -231,6 +316,7 @@ input {
 
 
 /******************* COLORES *******************/
+.gr{color: gray;}
 .fl{float: left;}
 .container{
     display: flex;
@@ -258,17 +344,39 @@ input {
 .menu{
     flex: 2;
 }
+#enviar {
+	width: 12%;
+	color: white;
+	background-color: gray;
+	border-radius: 0 0px 20px 0px;
+	border: none;
+	padding: 8px;
+	font-size: 13pt;
+	position: absolute;
+}
+.boton {
+	width: 100%;
+	/* justify-content: end; */
+	display: flex;
+	/* align-items: end; */
+	/* align-items: end; */
+	position: relative;
+	height: 5vh;
+	justify-content: end;
+	padding-right: 2%;
+}
 
 /******************* COLORES *******************/
 
-body{color: dimgray; padding: 0; max-width: 1650px; margin: auto; }
+body{color: dimgray; padding: 0; margin: auto; }
 .oro100 {background-color: rgba(170,143,83,1); 
     color: white!important;}
-.oro60 {background-color: ;}
 .gris1 {background-color: rgba(128,128,128,1); color: white!important;}
 .gris2 {background-color: rgba(77,77,77,1); color: white!important;}
 .toro {color: rgba(170,143,83,1)!important;}
-
+.black {color: black;}
+.fz50 {font-size: 50pt;}
+.fz32 {font-size: 30pt;}
 .blanco {border: solid 2px rgba(170,143,83,1); background-color: white}
 
 
@@ -294,7 +402,7 @@ body{color: dimgray; padding: 0; max-width: 1650px; margin: auto; }
 li{float: left; list-style: none;}
 
 /******************* ENCABEZADOS Y SUBTITULOS *******************/
-h1, h2, h3, h4, h5, h6, .sub16, .boton {font-family: 'Quicksand', sans-serif;}
+h1, h2, h3, h4, h5, h6, p, .sub16, .boton {font-family: 'Quicksand', sans-serif;}
 h2, h3, h4, h5, h6 {margin-bottom:0.5em;}
 
 h1{font-size: 50pt; font-weight: 300; /*light*/ letter-spacing: 5px;}
@@ -325,7 +433,6 @@ h6{font-size: 12pt; font-weight: 700;/*bold*/ letter-spacing: 0px;}
 .bbrr {border-bottom-right-radius: 15px; background-color: rgba(128,128,128,1); color: white; float: right; margin-left: 5px;  text-align: center}
 .bbrr:hover  {background-color: rgba(77,77,77,1);}
 .bbrr:active  {background-color: rgba(170,143,83,0.6); color: white!important}
-.btlr {border-top-left-radius: 15px; background-color: rgba(128,128,128,1); color: white; float:}
 
 p{padding-top: 20px;}
 
@@ -336,7 +443,67 @@ p{padding-top: 20px;}
 
 /* ----------PAGINA 7---------------------*/
 
+footer{
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#bb9c60;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+footer .navigation {
+    width:40%;
 
+}
+
+
+footer .navigation img{
+    height:80px;
+}
+
+footer a{
+    text-decoration: none;
+    color:inherit;
+    text-align: left;
+}
+
+footer .navigation nav{
+    width:100%;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+    justify-content: space-between;
+    font-weight: 800;
+    font-size: .8rem;
+}
+
+footer .contact{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+footer .contact .subscribe{
+    display: flex;
+    gap:1rem;
+    font-size: 1.5rem;
+}
+
+footer .contact .subscribe input{
+    padding:.2rem .5rem;
+
+
+    border: 2px solid #bb9c60;
+}
+footer .contact .redes {
+    display:flex;
+    align-items: center;
+    font-size: .6rem;
+}
+footer .contact .redes img{
+    height:40px;
+}
 
 /* ----------FIN PAGINA 7---------*/
 
@@ -347,4 +514,3 @@ p{padding-top: 20px;}
     
     /*.md-12, .md-8, .md-4, .md-6, body {width: 100%}*/
 }
-/
